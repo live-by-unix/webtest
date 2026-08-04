@@ -11,7 +11,7 @@ Webtest is a hardware requirements analyzer that determines the minimum CPU, GPU
 - **Responsive UI**: Clean, modern interface that works on all devices
 - **Confidence Scoring**: Provides confidence levels for each inferred specification
 
-## Installation
+## Installation **For Source Code**
 
 1. Clone the repository:
 ```bash
