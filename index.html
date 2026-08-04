@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webtest - Hardware Requirements Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Webtest</h1>
+            <p class="subtitle">Analyze minimum hardware requirements for any website</p>
+        </header>
+
+        <section class="input-section">
+            <form id="urlForm">
+                <div class="form-group">
+                    <label for="urlInput">Website URL</label>
+                    <input 
+                        type="url" 
+                        id="urlInput" 
+                        placeholder="https://example.com" 
+                        required
+                        pattern="https?://.+"
+                    >
+                </div>
+                <button type="submit" id="scanBtn" class="btn btn-primary">
+                    <span class="btn-text">Analyze</span>
+                    <span class="btn-loader"></span>
+                </button>
+            </form>
+        </section>
+
+        <section class="results-section" id="resultsSection" style="display: none;">
+            <div class="results-header">
+                <h2>Analysis Results</h2>
+                <div class="export-buttons">
+                    <button id="exportCsv" class="btn btn-secondary">Export CSV</button>
+                    <button id="exportJson" class="btn btn-secondary">Export JSON</button>
+                </div>
+            </div>
+            
+            <div class="url-display">
+                <strong>URL:</strong> <span id="displayUrl"></span>
+            </div>
+
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Minimum Requirement</th>
+                        <th>Confidence</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsBody">
+                    <!-- Results will be dynamically inserted here -->
+                </tbody>
+            </table>
+
+            <div class="metrics-details">
+                <h3>Performance Metrics</h3>
+                <div id="metricsDetails"></div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <h3>About Webtest</h3>
+            <p>Webtest analyzes websites to determine the minimum hardware specifications required for optimal performance. It uses headless browser benchmarks to measure CPU, GPU, RAM, network, and storage requirements.</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
