@@ -1,0 +1,16 @@
+{
+  "name": "webtest-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "puppeteer": "^24.2.0"
+  },
+  "allowScripts": {
+    "puppeteer@24.43.1": true
+  }
+}
