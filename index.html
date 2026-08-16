@@ -38,9 +38,12 @@
                 <div class="export-buttons">
                     <button id="exportCsv" class="btn btn-secondary">Export CSV</button>
                     <button id="exportJson" class="btn btn-secondary">Export JSON</button>
+                    <button type="button" id="closeResults" class="btn btn-close" aria-label="Close results">Close</button>
                 </div>
             </div>
             
+            <div id="analysisBanner" class="analysis-banner" style="display: none;"></div>
+
             <div class="url-display">
                 <strong>URL:</strong> <span id="displayUrl"></span>
             </div>
@@ -66,7 +69,8 @@
 
         <section class="info-section">
             <h3>About Webtest</h3>
-            <p>Webtest analyzes websites to determine the minimum hardware specifications required for optimal performance. It uses headless browser benchmarks to measure CPU, GPU, RAM, network, and storage requirements.</p>
+            <p>Webtest loads the URL you enter in headless Chrome (Puppeteer) on the server, measures load time and page weight, and estimates hardware requirements. Start the server with <code>npm start</code> — it opens in Google Chrome automatically.</p>
+            <p class="launch-hint"><a href="/launch.html">Open in Chrome app window</a> (use this if Close should shut the window)</p>
         </section>
     </div>
 

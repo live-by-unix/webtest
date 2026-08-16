@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Launching Webtest...</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #f8fafc;
+            color: #1e293b;
+        }
+    </style>
+</head>
+<body>
+    <p>Opening Webtest in Chrome...</p>
+    <script>
+        const popup = window.open(
+            '/?window=1',
+            'webtest',
+            'width=1100,height=900,resizable=yes,scrollbars=yes'
+        );
+
+        if (!popup) {
+            document.body.innerHTML =
+                '<p>Popup blocked. <a href="/?window=1">Click here to open Webtest</a></p>';
+        } else {
+            setTimeout(() => window.close(), 300);
+        }
+    </script>
+</body>
+</html>
